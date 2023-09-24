@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>all Loans</title>
+    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+<body>
+<h2><center>All Loans</h2>
+<a class="h4" th:href="@{/loans/add}">add new Loan+</a>
+<table class="table table-bordered">
+  <thead class="table-dark">
+  <tr>
+      <th>ID</th>
+      <th>amount</th>
+      <th>cancel</th>
+      <th>cid</th>
+      <th>date</th>
+      <th>duedate</th>
+      <th>interest</th>
+      <th>lid</th>
+      <th>penalty</th>
+      <th>ramount</th>
+  </tr>
+  </thead>
+    <tbody>
+    <th:block th:each="user : ${listLoans}">
+              <tr>
+                  <td>[[${user.id}]]</td>
+                  <td>[[${user.amount}]]</td>
+                  <td>[[${user.cancel}]]</td>
+                  <td>[[${user.cid}]]</td>
+                  <td>[[${user.date}]]</td>
+                  <td>[[${user.duedate}]]</td>
+                  <td>[[${user.interest}]]</td>
+                  <td>[[${user.lid}]]</td>
+                  <td>[[${user.penalty}]]</td>
+                  <td>[[${user.ramount}]]</td>
+              </tr>
+    </th:block>
+    </tbody>
+</table>
+</body>
+</html>

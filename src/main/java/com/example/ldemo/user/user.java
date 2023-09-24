@@ -2,8 +2,8 @@ package com.example.ldemo.user;
 
 import jakarta.persistence.*;
 
-import java.sql.Date;
 import java.util.Calendar;
+import java.util.Date;
 
 @Entity
 @Table(name="users")
@@ -109,5 +109,21 @@ public class user {
 
     public void setCancel(String cancel) {
         this.cancel = cancel;
+    }
+
+    @Override
+    public String toString() {
+        return "user{" +
+                "id=" + id +
+                ", cid=" + cid +
+                ", lid=" + lid +
+                ", amount=" + amount +
+                ", ramount=" + ramount +
+                ", date=" + date +
+                ", interest=" + interest +
+                ", duedate=" + duedate +
+                ", penalty=" + penalty +
+                ", cancel='" + cancel + '\'' +
+                '}';
     }
 }
